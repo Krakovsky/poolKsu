@@ -1,0 +1,112 @@
+.Cabinet {
+  padding: 35px 15px 0;
+
+  &__user {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      padding-right: 80px;
+    }
+
+    @media (max-width: 556px) {
+      padding-right: 0;
+    }
+  }
+
+  &__logout {
+    background-color: #e91e63;
+    border-color: #e91e63;
+
+    @media (max-width: 768px) {
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  .ant-avatar {
+    flex: 1 0 auto;
+    @media (max-width: 1024px) {
+      width: 90px !important;
+      height: 90px !important;
+      line-height: 90px !important;
+    }
+  }
+
+  &__container {
+    display: flex;
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 556px) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrap {
+    margin: 0 130px;
+    flex: 1;
+
+    @media (max-width: 1024px) {
+      margin: 0 60px;
+    }
+
+    @media (max-width: 768px) {
+      margin: 0;
+    }
+  }
+
+  &__count {
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    margin-bottom: 7px;
+
+    @media (max-width: 768px) {
+      font-size: 33px;
+    }
+
+    svg {
+      width: 20px;
+      padding-bottom: 3px;
+      margin-right: 5px;
+      height: auto;
+    }
+  }
+
+  &__info {
+    margin-left: 25px;
+
+    @media (max-width: 556px) {
+      margin-left: 0;
+      margin-top: 15px;
+    }
+  }
+
+  &__link {
+    padding: 0;
+    font-weight: 500;
+    height: auto;
+    margin-bottom: 2px;
+  }
+
+  &__subscribe {
+    font-size: 18px;
+    margin-bottom: 7px;
+
+    @media (max-width: 556px) {
+      font-size: 14px;
+    }
+  }
+}

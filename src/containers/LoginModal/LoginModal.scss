@@ -1,0 +1,45 @@
+.LoginModal {
+  max-width: 318px;
+
+  &__wrap {
+    margin-bottom: 20px;
+  }
+
+  .ant-modal-body {
+    padding: 16px 24px 24px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: flex-end;
+
+    button {
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 14px;
+    color: #000000;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  .ant-input {
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+
+  .ant-modal-header,
+  .ant-modal-footer {
+    border-bottom: 0;
+    border-top: 0;
+  }
+
+  .ant-modal-footer {
+    padding-bottom: 16px;
+  }
+}

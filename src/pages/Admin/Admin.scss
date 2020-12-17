@@ -1,0 +1,23 @@
+@import "../../styles/vars/vars";
+
+.Admin {
+  display: flex;
+  background-color: #f9f9f9;
+
+  &__label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #b5bccf;
+  }
+
+  &__container {
+    padding: 103px 26px 15px;
+    flex: 1;
+  }
+
+  &__title {
+    margin-bottom: 44px;
+  }
+}

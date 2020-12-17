@@ -1,0 +1,41 @@
+.Contacts {
+    padding: 35px 15px 0;
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+
+    &__icon {
+        display: inline-block;
+        margin-right: 15px;
+
+        svg {
+            width: 30px;
+            height: 30px;
+            display: block;
+        }
+    }
+
+    &__container {
+        display: inline-block;
+    }
+
+    &__map {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        margin-bottom: 15px;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

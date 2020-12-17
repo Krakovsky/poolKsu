@@ -1,0 +1,141 @@
+@import "./reset/reset";
+@import "./vars/vars";
+@import "~antd/dist/antd.css";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: $roboto;
+  font-style: normal;
+  font-weight: normal;
+  min-width: 320px;
+  background-color: #fbfbfd;
+}
+
+#root {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2329ac;
+}
+
+.btn {
+  background: #0099ff;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  color: #fff;
+  padding: 15px 65px;
+  height: auto;
+  border: none;
+  display: block;
+  margin: auto;
+
+  &:hover {
+    background-color: darken(#0099ff, 10);
+    color: #fff;
+  }
+
+  &:focus {
+    background-color: #0099ff;
+    color: #fff;
+  }
+}
+
+.Title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #333333;
+  margin-bottom: 27px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 15px;
+  }
+}
+
+.Container {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0px 13px 6px -11px rgba(0, 0, 0, 0.12);
+
+  @media (max-width: 1024px) {
+    padding: 20px 15px;
+  }
+}
+
+.Page {
+  max-width: 1430px;
+  width: 100%;
+  margin: auto;
+  padding-top: 35px;
+  margin-bottom: 35px;
+}
+
+.form-field {
+  &.error {
+    input,
+    .ant-picker,
+    .ant-select-selector {
+      border-color: red;
+    }
+  }
+}
+
+.form-error {
+  color: red;
+  font-size: 14px;
+  padding-top: 3px;
+  line-height: 1;
+  position: absolute;
+}
+
+.ant-select {
+  width: 100%;
+}
+
+.ant-select-selection-item {
+  line-height: 40px;
+}
+
+.ant-select-selector {
+  padding: 8.5px 15px !important;
+  height: auto !important;
+}
+
+.ant-tabs-nav {
+  margin-bottom: 20px;
+}
+
+.ant-tabs-nav-list {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.ant-modal-body {
+  padding: 20px;
+}

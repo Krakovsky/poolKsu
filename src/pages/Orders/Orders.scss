@@ -1,0 +1,43 @@
+.Orders {
+  &__labels {
+    display: flex;
+    margin-bottom: 12px;
+    padding-left: 34px;
+  }
+
+  &__name {
+    max-width: 261px;
+    width: 100%;
+  }
+
+  &__status {
+    max-width: 200px;
+    width: 100%;
+  }
+
+  &__start {
+    max-width: 190px;
+    width: 100%;
+  }
+
+  &__end {
+    max-width: 190px;
+    width: 100%;
+  }
+
+  &__phone {
+    max-width: 150px;
+    width: 100%;
+  }
+
+  &__email {
+    max-width: 240px;
+    width: 100%;
+  }
+
+  &__actions {
+    text-align: right;
+    flex: 1;
+    padding-right: 34px;
+  }
+}
