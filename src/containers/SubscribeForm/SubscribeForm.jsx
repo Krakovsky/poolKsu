@@ -55,12 +55,6 @@ SubscribeForm = reduxForm({
 
 export default connect(
   ({ auth }) => ({
-    initialValues: {
-      fullName: Object.keys(auth.me).length ? `${auth.me.firstName} ${auth.me.lastName}` : undefined,
-      phone: auth.me.phoneNumber
-    }
+    me: auth.me
   }),
-  {
-
-  }
 )(SubscribeForm);
