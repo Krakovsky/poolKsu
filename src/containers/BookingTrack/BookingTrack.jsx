@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import { bookTrack as bookTrackAction } from '../../redux/modules/calendar';
 
 let BookingTrack = ({ track, setTrack, time, bookTrack, trackId, date, roadId, me }) => {
-  const onSubmit = () => {
+  const onSubmit = (event) => {
+    event.preventDefault();
+
     bookTrack(trackId, roadId);
     setTrack(null);
   };

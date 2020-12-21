@@ -8,7 +8,7 @@ import validate from '../../helpers/validate';
 
 const { Option } = Select;
 
-let SubscribeForm = ({ handleSubmit }) => {
+let SubscribeForm = ({ handleSubmit, me }) => {
   const onSubmit = async ({ fullName, phone, subscription }) => {
     const data = {
       fullName,
@@ -21,12 +21,12 @@ let SubscribeForm = ({ handleSubmit }) => {
     <form onSubmit={handleSubmit(onSubmit)} className="Booking__form">
       <div className="Booking__form-container">
         <div className="Booking__form-wrap">
-          <div className="Booking__form-label">ФІО</div>
-          <Field name="fullName" placeholder="Ім’я та прізвище" component={FormField} />
+          <div className="Booking__form-label">IМ'Я ТА ПРIЗВИЩЕ</div>
+          <div className="Booking__form-value">{`${me?.firstName} ${me?.lastName}`}</div>
         </div>
         <div className="Booking__form-wrap">
           <div className="Booking__form-label">ТЕЛЕФОН</div>
-          <Field name="phone" className="ant-input" placeholder="+380 99 99-99-999" fieldType="phone" component={FormField} />
+          <div className="Booking__form-value">{me?.phoneNumber}</div>
         </div>
         <div className="Booking__select">
           <div className="Booking__form-label">АБОНЕМЕНТ</div>

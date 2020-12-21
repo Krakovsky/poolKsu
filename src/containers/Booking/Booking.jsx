@@ -107,7 +107,7 @@ const Booking = ({ getRoads, roads, getRoadsByObject, groupedRoads, loading, isA
                   />
                 </TabPane>
                 <TabPane tab="Абонемент" key="2">
-                  <SubscribeForm trackId={trackId} />
+                  <SubscribeForm me={me} trackId={trackId} />
                 </TabPane>
               </Tabs>
             )
