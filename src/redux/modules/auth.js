@@ -1,6 +1,5 @@
 import Api from '../../services/Api';
 import { openNotification } from '../../helpers/openNotification';
-import { reset } from 'redux-form';
 
 const moduleName = 'auth';
 
@@ -16,11 +15,16 @@ const VALIDATE_TOKEN_START = `${moduleName}/VALIDATE_TOKEN_START`;
 const VALIDATE_TOKEN_SUCCESS = `${moduleName}/VALIDATE_TOKEN_SUCCESS`;
 const VALIDATE_TOKEN_ERROR = `${moduleName}/VALIDATE_TOKEN_ERROR`;
 
+const EDIT_ME_START = `${moduleName}/EDIT_ME_START`;
+const EDIT_ME_SUCCESS = `${moduleName}/EDIT_ME_SUCCESS`;
+const EDIT_ME_ERROR = `${moduleName}/EDIT_ME_ERROR`;
+
 const SIGN_OUT = `${moduleName}/SIGN_OUT`;
 
 const defaultState = {
   isAuthenticated: false,
   isAuthenticating: false,
+  loading: false,
   token: '',
   error: '',
   me: {},
@@ -43,6 +47,20 @@ export default (state = defaultState, { type, payload }) => {
         ...state,
         isAuthenticated: false,
         isAuthenticating: false,
+        error: `Authentication error: ${payload.error}`,
+      };
+    case EDIT_ME_START:
+      return { ...state, loading: true };
+    case EDIT_ME_SUCCESS:
+      return {
+        ...state,
+        loading: false,
+        me: payload.data,
+      };
+    case EDIT_ME_ERROR:
+      return {
+        ...state,
+        loading: false,
         error: `Authentication error: ${payload.error}`,
       };
     case VALIDATE_TOKEN_START:
@@ -135,6 +153,24 @@ export const signUp = credentials => async (dispatch) => {
   } catch (error) {
     dispatch({ type: SIGN_UP_ERROR, payload: { error: error.message || error } });
     openNotification('error', 'Сталася помилка', 'Регiстрацiю не виконано!')
+
+    return false;
+  }
+};
+
+export const editMe = credentials => async (dispatch) => {
+  dispatch({ type: EDIT_ME_START });
+
+  try {
+    const { data } = await Api.put('api/v1/users/me', credentials);
+
+    dispatch({ type: EDIT_ME_SUCCESS, payload: { data } });
+    openNotification('success', 'Редагування було виконано!');
+
+    return true;
+  } catch (error) {
+    dispatch({ type: EDIT_ME_ERROR, payload: { error: error.message || error } });
+    openNotification('error', 'Сталася помилка', 'Редагування не виконано!');
 
     return false;
   }

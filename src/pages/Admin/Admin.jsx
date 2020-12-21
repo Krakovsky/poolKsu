@@ -18,13 +18,7 @@ const Admin = ({ isA }) => (
           <AdminSidebar />
           <AdminHeader />
           <div className="Admin__container">
-            <Switch>
-              <Redirect exact from="/admin" to="/admin/orders" />
-              <Route path="/admin/orders" component={Orders} exact />
-              <Route path="/admin/timetable" component={AdminTimetable} exact />
-              <Route path="/admin/about" component={AdminAbout} exact />
-              <Route path="/admin/contacts" component={AdminContacts} exact />
-            </Switch>
+            <Orders />
           </div>
         </>
       )

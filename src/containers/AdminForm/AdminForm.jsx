@@ -6,9 +6,8 @@ import { Button } from 'antd';
 import './AdminForm.scss';
 import { FormField } from '../../components';
 import adminLogo from '../../media/logo-admin.svg';
-import { setA as setAAction } from '../../redux/modules/pool';
 
-let AdminForm = ({ handleSubmit, setA }) => {
+let AdminForm = ({ handleSubmit }) => {
   const onSubmitForm = async ({ login, password }) => {
 
   }
@@ -24,7 +23,7 @@ let AdminForm = ({ handleSubmit, setA }) => {
         <div className="AdminForm__label">Пароль</div>
         <Field placeholder="Пароль..." name="password" type="password" component={FormField} />
       </div>
-      <Button onClick={() => setA()} className="AdminForm__btn" htmlType="submit">Увійти</Button>
+      <Button className="AdminForm__btn" htmlType="submit">Увійти</Button>
     </form>
   )
 };
@@ -35,7 +34,4 @@ AdminForm = reduxForm({
 
 export default connect(
   null,
-  {
-    setA: setAAction
-  }
 )(AdminForm);

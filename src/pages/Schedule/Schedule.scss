@@ -1,5 +1,5 @@
 .Schedule {
-  padding: 35px 15px 0;
+  padding: 35px 15px;
 
   &__title {
     font-size: 19px;
@@ -12,6 +12,18 @@
 
   .ant-btn {
     margin-bottom: 15px;
+  }
+
+  &__week {
+    display: flex;
+    font-size: 36px;
+    flex-direction: column;
+    align-items: center;
+
+    svg {
+      display: block;
+      width: 200px;
+    }
   }
 
   &__item {

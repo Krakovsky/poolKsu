@@ -16,7 +16,7 @@ const LoginModal = Yup.object().shape({
   email: Yup
     .string()
     .trim()
-    .email()
+    .email('Введіть коректний e-mail')
     .required('Введіть email'),
   phone: Yup
     .string()

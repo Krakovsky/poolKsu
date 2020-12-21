@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Tabs, Button, Modal } from 'antd';
+import { ReactSVG } from 'react-svg';
 
 import './Schedule.scss';
 import check from '../../media/check.svg';
 import { SubscribeForm } from '../../containers';
+import weekend from '../../media/weekend.svg';
 
 const { TabPane } = Tabs;
 
@@ -58,28 +60,12 @@ const Schedule = () => {
                 <div className="Schedule__item-time">9.00-10.00</div>
               </div>
               <div className="Schedule__item">
-                <div className="Schedule__item-title">Факультет української філології та журналістики</div>
-                <div className="Schedule__item-time">10.00-11.00</div>
-              </div>
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Факультет комп'ютерних наук, фізики та математики</div>
-                <div className="Schedule__item-time">11.00-12.00</div>
-              </div>
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Медичний факультет</div>
-                <div className="Schedule__item-time">12.00-13.00</div>
-              </div>
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">13.00-16.00</div>
-              </div>
-              <div className="Schedule__item">
                 <div className="Schedule__item-title">Школа плавання</div>
-                <div className="Schedule__item-time">16.00-19.00</div>
+                <div className="Schedule__item-time">16.00-20.00</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">19.00-22.00</div>
+                <div className="Schedule__item-time">20.00-22.00</div>
               </div>
             </div>
           </TabPane>
@@ -98,16 +84,16 @@ const Schedule = () => {
                 <div className="Schedule__item-time">10.00-12.00</div>
               </div>
               <div className="Schedule__item">
-                <div className="Schedule__item-title">Педагогічний факультет</div>
+                <div className="Schedule__item-title">Факультети</div>
                 <div className="Schedule__item-time">12.00-13.00</div>
               </div>
               <div className="Schedule__item">
-                <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">13.00-15.00</div>
+                <div className="Schedule__item-title">Викладачі та співробітники університету</div>
+                <div className="Schedule__item-time">13.00-14.30</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Школа плавання</div>
-                <div className="Schedule__item-time">15.30-20.30</div>
+                <div className="Schedule__item-time">16.30-20.30</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Абонемент</div>
@@ -126,16 +112,20 @@ const Schedule = () => {
                 <div className="Schedule__item-time">9.00-10.00</div>
               </div>
               <div className="Schedule__item">
-                <div className="Schedule__item-title">Історико-юридичний факультет</div>
-                <div className="Schedule__item-time">10.00-11.00</div>
-              </div>
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Факультет біології, географії і екології</div>
+                <div className="Schedule__item-title">Факультети</div>
                 <div className="Schedule__item-time">10.00-11.00</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">11.00-16.00</div>
+                <div className="Schedule__item-time">11.00-14.00</div>
+              </div>
+              <div className="Schedule__item">
+                <div className="Schedule__item-title">Діти з обмеженими можливостями</div>
+                <div className="Schedule__item-time">14.00-15.00</div>
+              </div>
+              <div className="Schedule__item">
+                <div className="Schedule__item-title">Абонемент</div>
+                <div className="Schedule__item-time">15.00-16.00</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Школа плавання</div>
@@ -158,16 +148,20 @@ const Schedule = () => {
                 <div className="Schedule__item-time">9.00-10.00</div>
               </div>
               <div className="Schedule__item">
-                <div className="Schedule__item-title">Факультет економіки і менеджменту</div>
+                <div className="Schedule__item-title">Факультети</div>
                 <div className="Schedule__item-time">10.00-11.00</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">11.00-15.00</div>
+                <div className="Schedule__item-time">11.00-15.30</div>
+              </div>
+              <div className="Schedule__item">
+                <div className="Schedule__item-title">Тренер Середенко С.А.</div>
+                <div className="Schedule__item-time">15.30-16.30</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Школа плавання</div>
-                <div className="Schedule__item-time">15.30-20.30</div>
+                <div className="Schedule__item-time">16.30-20.30</div>
               </div>
               <div className="Schedule__item">
                 <div className="Schedule__item-title">Абонемент</div>
@@ -190,11 +184,7 @@ const Schedule = () => {
                 <div className="Schedule__item-time">10.00-12.00</div>
               </div>
               <div className="Schedule__item">
-                <div className="Schedule__item-title">Факультет української й іноземної філології та журналістики</div>
-                <div className="Schedule__item-time">12.00-13.00</div>
-              </div>
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Соціально-психологічний факультет</div>
+                <div className="Schedule__item-title">Факультети</div>
                 <div className="Schedule__item-time">12.00-13.00</div>
               </div>
               <div className="Schedule__item">
@@ -216,23 +206,15 @@ const Schedule = () => {
             </div>
           </TabPane>
           <TabPane tab="субота" key="6">
-            <div className="Schedule__items">
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Школа плавання</div>
-                <div className="Schedule__item-time">9.00-12.00</div>
-              </div>
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">12.00-19.00</div>
-              </div>
+            <div className="Schedule__week">
+              <ReactSVG src={weekend} />
+              Сьогоднi басейн зачинений
             </div>
           </TabPane>
           <TabPane tab="неділя" key="7">
-            <div className="Schedule__items">
-              <div className="Schedule__item">
-                <div className="Schedule__item-title">Абонемент</div>
-                <div className="Schedule__item-time">09.00-19.00</div>
-              </div>
+            <div className="Schedule__week">
+              <ReactSVG src={weekend} />
+              Сьогоднi басейн зачинений
             </div>
           </TabPane>
         </Tabs>

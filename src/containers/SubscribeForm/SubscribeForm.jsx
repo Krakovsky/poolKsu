@@ -4,20 +4,17 @@ import { Button, Select } from 'antd';
 import { connect } from 'react-redux';
 
 import { FormField } from '../../components';
-import { getRoads as getRoadsAction } from '../../redux/modules/pool';
 import validate from '../../helpers/validate';
 
 const { Option } = Select;
 
-let SubscribeForm = ({ handleSubmit, setBooked }) => {
+let SubscribeForm = ({ handleSubmit }) => {
   const onSubmit = async ({ fullName, phone, subscription }) => {
     const data = {
       fullName,
       phone,
       subscription
     }
-
-    setBooked(true);
   }
 
   return (

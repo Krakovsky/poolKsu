@@ -1,9 +1,9 @@
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Button, Avatar } from 'antd';
+import { Button } from 'antd';
 import Media from 'react-media';
-import { UserOutlined } from '@ant-design/icons';
 import { ReactSVG } from 'react-svg';
+import { useLocation } from 'react-router-dom'
 
 import './Header.scss';
 import logo from '../../media/logo.svg';
@@ -15,6 +15,7 @@ import { LoginModal } from '../../containers';
 let Header = ({ isAuthenticated }) => {
   const [visible, setVisible] = useState(false);
   const [isOpen, setMenu] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     const wasMenuOpen = isOpen ? false : true;
@@ -43,7 +44,12 @@ let Header = ({ isAuthenticated }) => {
   return (
     <>
       <header className="Header">
-        <NavLink to="/" className="Header__logo"><img src={logo} alt="logo" /></NavLink>
+        <NavLink
+          to="/"
+          className={`Header__logo ${location.pathname === '/' ? 'Header__logo--main' : ''}`}
+        >
+          <img src={logo} alt="logo" />
+        </NavLink>
         <Media queries={{
           tablet: "(max-width: 1024px)",
           large: "(min-width: 1025px)"

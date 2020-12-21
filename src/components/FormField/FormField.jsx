@@ -9,7 +9,7 @@ const FormField = ({
   prefix, suffix, fieldType, rows, children, id, defaultValue,
   showSearch, options, dateOptions, fileOptions, radioOptions,
   meta: { touched, error }, disabled, defaultChecked, checked, mode, focus,
-  maxLength
+  maxLength, disabledDate
 }) => {
   let fieldElement;
   const fieldProps = {
@@ -99,8 +99,8 @@ const FormField = ({
     case 'datePicker':
       fieldElement = (
         <DatePicker
-          showTime
-          format="DD.MM.YYYY h:mm"
+          format="DD.MM.YYYY"
+          disabledDate={disabledDate}
           {...fieldProps}
           {...dateOptions}
         />
